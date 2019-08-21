@@ -13,7 +13,8 @@ const ViewTab = ({ activeTab, onTabChange }) => (
       <span
         className={generateLinkClass(activeTab, LIST_VIEW)}
         href="#"
-        onClick={() => {
+        onClick={(event) => {
+          event.preventDefault()
           onTabChange(LIST_VIEW)
         }}
       >
@@ -29,7 +30,8 @@ const ViewTab = ({ activeTab, onTabChange }) => (
     <li className="nav-item">
       <span
         className={generateLinkClass(activeTab, CHART_VIEW)}
-        onClick={() => {
+        onClick={(event) => {
+          event.preventDefault()
           onTabChange(CHART_VIEW)
         }}
       >
