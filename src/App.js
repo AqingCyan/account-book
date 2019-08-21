@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import PriceList from "./components/PriceList"
 import ViewTab from "./components/ViewTab"
+import TotalPrice from "./components/TotalPrice"
 import { LIST_VIEW, CHART_VIEW } from "./util/utility"
 
 const items = [
@@ -35,7 +36,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Hello World</h1>
+        <TotalPrice income={100} outcome={300} />
         <ViewTab
           activeTab={LIST_VIEW}
           onTabChange={view => {
