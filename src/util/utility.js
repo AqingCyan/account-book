@@ -16,3 +16,12 @@ export const range = (size, startAt = 0) => {
   }
   return arr
 }
+
+// 格式化年月
+export const parseToYearMonth = (str) => {
+  const date = str ? new Date(str) : new Date()
+  return {
+    year: date.getFullYear(),
+    month: date.getMonth() + 1
+  }
+}
