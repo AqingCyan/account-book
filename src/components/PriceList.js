@@ -25,7 +25,8 @@ const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
             {item.price}元
           </span>
           <span className="col-2">{item.date}</span>
-          <span
+          <a
+            href={'#'}
             className="col-1"
             // 这样写可以绑定 this 到组件
             onClick={() => {
@@ -39,7 +40,7 @@ const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
               color={"#ffffff"}
               icon="ios-create-outline"
             />
-          </span>
+          </a>
           <span
             className="col-1"
             onClick={() => {

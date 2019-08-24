@@ -17,7 +17,7 @@ import {
 } from "../util/utility"
 
 // 拆分数据结构，避免 category 冗余
-const categorys = {
+export const categorys = {
   "1": {
     id: "1",
     name: "旅行",
@@ -32,7 +32,7 @@ const categorys = {
   }
 }
 
-const items = [
+export const items = [
   {
     id: 1,
     title: "去北京旅游",
