@@ -35,7 +35,9 @@ describe("test PriceList component", () => {
   })
   it('should tigger the correct function callbacks', () => {
     const firstItem = wrapper.find('.list-group-item').first()
-    firstItem.find('span').first().simulate('click')
+    firstItem.find('.click').first().simulate('click')
     expect(props.onModifyItem).toHaveBeenCalledWith(itemsWithCategory[0])
+    firstItem.find('.click').last().simulate('click')
+    expect(props.onDeleteItem).toHaveBeenCalledWith(itemsWithCategory[0])
   })
 })
