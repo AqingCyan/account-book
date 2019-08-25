@@ -147,7 +147,7 @@ class Home extends Component {
     return (
       <Fragment>
         <header className="App-header">
-          <div className="row mb-5">
+          <div className="row mb-5" style={{justifyContent: "center"}}>
             <img src={logo} className="App-logo" alt="logo" />
           </div>
           <div className="row">
