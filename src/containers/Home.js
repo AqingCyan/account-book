@@ -56,7 +56,7 @@ export const items = [
   }
 ]
 
-const newItem = {
+export const newItem = {
   id: 4,
   title: "新的项目",
   price: 300,
@@ -69,7 +69,7 @@ class Home extends Component {
     super(props)
     this.state = {
       items,
-      currentDate: parseToYearMonth(),
+      currentDate: parseToYearMonth('2019/08/21'),
       tabView: LIST_VIEW
     }
   }
@@ -173,7 +173,7 @@ class Home extends Component {
               onDeleteItem={this.deleteItem}
             />
           )}
-          {tabView === CHART_VIEW && <h1> 这里是图表模式📈</h1>}
+          {tabView === CHART_VIEW && <h1 className="chart-title"> 这里是图表模式📈</h1>}
         </div>
       </Fragment>
     )
